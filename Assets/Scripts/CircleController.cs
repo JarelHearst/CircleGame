@@ -27,8 +27,10 @@ public class CircleController : MonoBehaviour
             mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (circleCollider.OverlapPoint(mouseInput))
             {
-                Debug.Log("Clicked");
+                rigidbody.WakeUp();
+
             }
+            //
         }
     }
 }
